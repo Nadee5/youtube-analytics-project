@@ -7,9 +7,10 @@ if __name__ == '__main__':
     print(moscowpython.title)  # MoscowPython
     print(moscowpython.video_count)  # 685 (может уже больше)
     print(moscowpython.url)  # https://www.youtube.com/channel/UC-OVMPlMA3-YCIeg4z5z23A
+    print(moscowpython.description)
 
     # менять не можем
-    moscowpython.channel_id = 'Новое название'
+    #moscowpython.channel_id = 'Новое название'
     # AttributeError: property 'channel_id' of 'Channel' object has no setter
 
     # можем получить объект для работы с API вне класса
@@ -18,3 +19,4 @@ if __name__ == '__main__':
 
     # создаем файл 'moscowpython.json' в данными по каналу
     moscowpython.to_json('moscowpython.json')
+
