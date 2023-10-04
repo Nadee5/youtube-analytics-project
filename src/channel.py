@@ -31,13 +31,16 @@ class Channel:
 
     @property
     def channel_id(self):
+        """Возвращает приватный инициализированный id канала."""
         return self.__channel_id
 
     @classmethod
     def get_service(cls):
+        """Возвращает объект для работы с YouTube API."""
         return cls.youtube
 
     def to_json(self, filename):
+        """Сохраняет в файл значения атрибутов экземпляра `Channel`."""
         with open(filename, 'w', encoding='utf-8') as file:
             dict_info = {
                 'channel_id': self.__channel_id,
@@ -48,7 +51,7 @@ class Channel:
                 'video_count': self.video_count,
                 'view_count': self.view_count,
             }
-            json.dump(dict_info, file)
+            json.dump(dict_info, file, ensure_ascii=False)
 
 
 
