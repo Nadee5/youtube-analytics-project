@@ -88,7 +88,7 @@ class Channel:
                 'video_count': self.video_count,
                 'view_count': self.view_count,
             }
-            json.dump(dict_info, file, ensure_ascii=False)
+            json.dump(dict_info, file, ensure_ascii=False, indent=4)
 
 
 
